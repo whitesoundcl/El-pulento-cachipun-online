@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
+    <title>El pulento cachipun </title>
+    <style>
+        #gameBlock {
+            display: none;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+        crossorigin="anonymous"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="index.js"></script>
+</head>
+
+<body>
+    <div class="container-fluid align-items-center bg-light">
+        <h1 class="text-center">El pulento cachipun online (Rock-paper-scissors Online)</h1>
+
+        <div class="container pb-4 pt-3" id="blockNick">
+            <div class="center-block">
+                <div class="card">
+                    <div class="card-body">
+                        <p>
+                            Enter your nickname below to start. You can challenge your friends or other users connected.
+                        </p>
+                        <form id="formNick">
+                            <div class="form-group">
+
+                                <input type="text" id="txtNick" placeholder="Your nickname">
+
+                            </div>
+                            <div class="form-group">
+                                <button id="btnNick" type="submit" class="btn-primary btn-sm">Aceptar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="container pt-2">
+            <div class="row ">
+
+                <div class="col">
+                    <div>
+                        <form action="" id="formRequest">
+                            <div class="form-group">
+
+                                <input type="text" id="txtRequest" placeholder="user to challenge">
+                            </div>
+                        </form>
+                    </div>
+                    <p>Users online:</p>
+                    <ul id="users" class="list-group"></ul>
+                    <br>
+                    <div id="challengersBlock">
+                        <p>Users challenging you:</p>
+                        <ul id="challengers" class="list-group"></ul>
+                    </div>
+                </div>
+                <div class="col">
+                    <div id="gameBlock">
+                        Rock, paper or scissors?
+                        <br>
+                        <button id="btnRock" type="button" class="btn btn-primary btn-sm">Rock</button>
+                        <button id="btnPaper" type="button" class="btn btn-primary btn-sm">Paper</button>
+                        <button id="btnScissors" type="button" class="btn btn-primary btn-sm">Scissors</button>
+
+                    </div>
+                    <p>
+                        INFO:
+                    </p>
+                    <p id="info"></p>
+                    <p>Warning:</p>
+                    <p id="warning">
+
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
